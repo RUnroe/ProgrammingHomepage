@@ -1,0 +1,224 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+@font-face{
+    font-family:nexa;
+    src: url("assets/NexaBold.otf");
+}
+
+@font-face{
+    font-family:roboto;
+    src: url("assets/Roboto-Thin.ttf");
+}
+@font-face{
+    font-family:raleway;
+    src: url("assets/Raleway-Medium.ttf");
+}
+   
+@keyframes onLink {
+    from {color: #fff;}
+    to {color:#c10909;}
+}
+@keyframes offLink {
+    from {color: #c10909;}
+    to {color:#fff;}
+}
+
+
+@keyframes onHoverText {
+    from {color: #121212;transform: scale(1);}
+    to {color:#fff; transform: scale(1.1);}
+}
+@keyframes onHoverDiv {
+    from {background-color: #fff; border:2px solid Grey; transform: scale(1);}
+    to {background-color:#c10909; border:2px solid #680606; transform: scale(1.3);}
+}
+
+@keyframes outHoverText {
+    from {color: #fff; transform: scale(1.1);}
+    to {color:#121212; transform: scale(1);}
+}
+@keyframes outHoverDiv {
+    from {background-color: #c10909;border:2px solid #680606; transform: scale(1.3);}
+    to {background-color:#fff;border:2px solid Grey; transform: scale(1);}
+}
+
+
+body{
+    background-color: #121212;
+    height:1000px;
+}
+
+
+.header{
+    text-align:center;
+    background-image: url("assets/drhs-oneNation.jpg");
+    -moz-background-position: 50% 10%;
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    background-size: auto; 
+    height:65vh;
+    position:relative;
+    
+    
+}
+
+.bars{
+    position:absolute;
+    bottom:-12px;
+    width:100%;
+}
+.redBar{
+    border:5px solid #c10909;
+}
+
+.blackBar{
+    border:5px solid black;
+}
+
+.jag{
+    position: absolute;
+    top:56vh;
+    margin: 0 auto;
+    left:0;
+    right:0;
+    height:18vh;
+    
+}
+h1{
+    padding-top:5vh;
+    font-size:16vh;
+    font-family:"raleway";
+    overflow: hidden;
+    font-weight: bolder;
+    color:white;
+    letter-spacing: 0.8vh;
+}
+
+h2{
+    color:white;
+    font-size:8vh;
+    font-family:'nexa';
+    text-align:center;
+    letter-spacing: 0.4vh;
+}
+
+.main{
+    margin-top:10vh;
+    
+}
+
+
+/* ON HOVER ANIMATIONS*/
+#class1 div:hover,#class2 div:hover, #class6 div:hover{
+    background-color:#c10909;
+    border:2px solid #680606;
+    transform: scale(1.3);
+    animation: onHoverDiv 0.2s 1;
+}
+#class1 div:hover h3,#class1 div:hover h4, #class2 div:hover h3,#class2 div:hover h4, #class6 div:hover h3,#class6 div:hover h4 {
+    animation: onHoverText 0.2s 1;
+    transform: scale(1.1);
+    color:white;
+}
+
+
+
+
+
+#class1 div,#class2 div,  #class6 div{
+    border:2px solid Grey;
+    height:14vh;
+    width:22vh;
+    border-radius: 5vh;
+    text-align:center;
+    display:inline-block;
+    margin:1.5%;
+    background-color: white;
+    box-shadow:2vh 2vh 2vh rgba(0,0,0,0.7);
+    overflow:hidden;
+    -moz-overflow:hidden;
+    font-family:"roboto";
+    letter-spacing: 0.4vh;
+    font-weight: bold;
+    animation: outHoverDiv 0.2s 1;
+
+}
+h3{
+    margin-top:2.5vh;
+    font-size: 2.8vh;
+    color:#121212;
+    animation: outHoverText 0.2s 1;
+    
+}
+h4{
+    font-size:2.8vh;
+    padding-top:2vh;
+    color:#121212;
+    animation: outHoverText 0.2s 1;
+    
+}
+
+.longLastName{
+    font-size:1.8vh;
+    padding-top:2.5vh;
+}
+
+.headingPadding{
+    padding-top:3vh;
+}
+
+hr{
+    width:30vw;
+    height:.3vh;
+    color:#c10909;
+    background-color: #c10909;
+    border:#c10909;
+}
+.footer{
+    margin-top:20vh;
+    background-color:#090909;
+    width:100%;
+    bottom:0;
+    height:15vh;
+}
+h5, h5 a{
+    padding-top: 5vh;
+    color:#303030;
+    font-family: "nexa";
+    font-size: 3.5vh;
+    letter-spacing: .3vw;
+    text-decoration: none;
+}
+
+h5 a:hover{
+    color: #c10909;
+}
+
+.external{
+    width:13%;
+    height:10vh;
+    display:inline-block;
+    margin-bottom:10vh;
+    margin-left:2%;
+    margin-right:2%;
+    border-radius:5vh;
+    
+}
+
+.external p{
+    padding-top:3.2vh;
+    font-size:5vh;
+    text-align:center;
+    color:white;
+    font-family:"roboto";
+    font-weight: bold;
+    animation: offLink 0.15s 1;
+}
+
+.external p:hover{
+    animation: onLink 0.15s 1;
+    color:#c10909;
+}
